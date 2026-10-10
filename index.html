@@ -7,6 +7,101 @@
 :root{--ink:#38271f;--muted:#725e53;--cream:#fbf5f0;--blush:#f1d8cb;--rose:#c98776;--line:#dfc4b5}
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f4e5dc}body{overflow:hidden}.screen{height:100dvh;width:100vw;padding:1.5vh 2vw;display:grid;grid-template-rows:1fr 1.15fr 1fr;gap:1.5vh;background:linear-gradient(135deg,#f8eee7,#ead0c1)}.panel{min-height:0;border:1px solid rgba(130,91,72,.16);border-radius:25px;background:rgba(255,250,246,.92);box-shadow:0 5px 20px rgba(95,62,44,.07);overflow:hidden}.date-panel{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(140deg,#f7e6dc,#efcfc0);position:relative}.weekday{font-size:clamp(18px,3.1vw,40px);letter-spacing:.19em;font-weight:500}.date-line{display:flex;align-items:center;justify-content:center;gap:3vw;width:100%;margin:0.4vh 0}.day{font-family:Georgia,serif;font-size:clamp(100px,23vh,230px);line-height:.9;font-weight:400}.time{border-left:1px solid var(--line);padding-left:3vw;font-family:Georgia,serif;font-size:clamp(28px,7vw,76px);white-space:nowrap}.ampm{font-family:Arial,sans-serif;font-size:.34em;display:block;letter-spacing:.08em;margin-top:1vh}.month{font-size:clamp(20px,3.5vw,42px);letter-spacing:.24em}.year{font-size:clamp(17px,2.4vw,30px);letter-spacing:.3em;margin-top:.5vh}.weather{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1vh 2vw;background:linear-gradient(145deg,#fff8f3,#f2d8cb)}.city{font-size:clamp(16px,2.5vw,30px);letter-spacing:.18em;text-transform:uppercase;text-align:center}.weather-main{display:flex;align-items:center;justify-content:center;gap:2vw;width:100%;margin:.7vh 0}.weather-icon{font-size:clamp(55px,12vh,110px);line-height:1}.temp{font-family:Georgia,serif;font-size:clamp(65px,15vh,145px);line-height:1}.condition{font-size:clamp(17px,3vw,32px);text-align:center}.hi-low{font-size:clamp(15px,2.5vw,27px);color:var(--muted);text-align:center;margin-top:.8vh}.forecast{display:grid;grid-template-columns:repeat(5,1fr);width:100%;margin-top:auto;padding-top:1vh}.forecast-day{text-align:center;border-right:1px solid var(--line);font-size:clamp(12px,1.8vw,20px);padding:.4vh 0}.forecast-day:last-child{border:0}.forecast-icon{font-size:clamp(20px,4vw,38px);margin:.3vh 0}.forecast-hi{font-weight:bold}.forecast-low{color:var(--muted);font-size:.9em}.mail-panel{display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;padding:2vh 3vw;background:linear-gradient(135deg,#f8e9e0,#e9c2b3);gap:2vw}.mail-art{display:flex;align-items:center;justify-content:center;font-size:clamp(65px,16vh,150px)}.mail-content{text-align:center}.mail-title{font-size:clamp(22px,4vw,42px);letter-spacing:.18em;margin-bottom:1vh}.last-label{font-size:clamp(13px,2vw,21px);letter-spacing:.12em}.last-time{font-size:clamp(19px,3.1vw,34px);line-height:1.3;margin:1vh 0 1.4vh}.mail-button{background:#bd7e6d;color:white;border:0;border-radius:15px;padding:1.5vh 1.5vw;font-size:clamp(14px,2.3vw,24px);font-weight:bold;letter-spacing:.05em;box-shadow:0 4px 0 #a66c5d;cursor:pointer;width:100%;min-height:52px}.mail-button:active{transform:translateY(2px);box-shadow:0 2px 0 #a66c5d}.status{font-size:clamp(11px,1.5vw,16px);color:var(--muted);margin-top:.8vh}.credit{position:fixed;bottom:3px;right:8px;font-size:9px;color:#856d60;opacity:.7}
 @media (orientation:portrait){.screen{grid-template-rows:.9fr 1.12fr 1.12fr;padding:1vh 2vw;gap:1vh}.date-line{gap:2vw}.day{font-size:clamp(90px,16vh,170px)}.time{font-size:clamp(25px,6vw,48px);padding-left:2vw}.weekday{font-size:clamp(17px,4.2vw,28px)}.month{font-size:clamp(18px,4vw,29px)}.year{font-size:clamp(15px,3vw,22px)}.weather-main{gap:1vw}.weather-icon{font-size:clamp(48px,8vh,85px)}.temp{font-size:clamp(58px,10vh,100px)}.condition{font-size:clamp(15px,3.3vw,24px)}.city{font-size:clamp(15px,3vw,23px)}.hi-low{font-size:clamp(14px,2.8vw,21px)}.forecast-day{font-size:clamp(11px,2.4vw,17px)}.forecast-icon{font-size:clamp(20px,4vw,31px)}.mail-panel{grid-template-columns:1fr;padding:1.5vh 3vw;gap:.3vh}.mail-art{font-size:clamp(35px,6vh,58px)}.mail-title{font-size:clamp(21px,4.5vw,31px);margin:0}.last-time{margin:.4vh 0 .7vh;font-size:clamp(17px,3.5vw,25px)}.mail-button{padding:1vh 1vw;min-height:46px}}
+/* LANDSCAPE TV FIX */
+@media (orientation: landscape) {
+  .screen {
+    grid-template-rows: 0.9fr 1.1fr 1fr;
+    padding: 1vh 1vw;
+    gap: 0.8vh;
+  }
+
+  .weekday {
+    font-size: clamp(12px, 2.2vw, 24px);
+  }
+
+  .day {
+    font-size: clamp(50px, 12vh, 105px);
+  }
+
+  .time {
+    font-size: clamp(22px, 4vw, 48px);
+  }
+
+  .month {
+    font-size: clamp(15px, 2.5vw, 28px);
+  }
+
+  .year {
+    font-size: clamp(12px, 1.8vw, 20px);
+  }
+
+  .weather {
+    padding: 0.5vh 1vw;
+  }
+
+  .weather-icon {
+    font-size: clamp(35px, 7vh, 65px);
+  }
+
+  .temp {
+    font-size: clamp(40px, 9vh, 82px);
+  }
+
+  .condition {
+    font-size: clamp(14px, 2vw, 22px);
+  }
+
+  .hi-low {
+    font-size: clamp(12px, 1.7vw, 19px);
+    margin-top: 0.3vh;
+  }
+
+  .forecast {
+    padding-top: 0.3vh;
+  }
+
+  .forecast-day {
+    font-size: clamp(10px, 1.4vw, 16px);
+    padding: 0.2vh 0;
+  }
+
+  .forecast-icon {
+    font-size: clamp(16px, 2.5vw, 26px);
+  }
+
+  .mail-panel {
+    padding: 1vh 2vw;
+    gap: 1vw;
+  }
+
+  .mail-art {
+    font-size: clamp(40px, 9vh, 85px);
+  }
+
+  .mail-title {
+    font-size: clamp(18px, 2.8vw, 30px);
+  }
+
+  .last-label {
+    font-size: clamp(11px, 1.5vw, 16px);
+  }
+
+  .last-time {
+    font-size: clamp(15px, 2vw, 23px);
+    margin: 0.4vh 0;
+  }
+
+  .mail-button {
+    font-size: clamp(12px, 1.7vw, 18px);
+    padding: 0.8vh 1vw;
+    min-height: 36px;
+  }
+
+  .status {
+    font-size: clamp(9px, 1vw, 12px);
+  }
+}
+
 </style></head>
 <body><main class="screen">
 <section class="panel date-panel" aria-label="Date and time"><div class="weekday" id="weekday">WEDNESDAY</div><div class="date-line"><div class="day" id="day">8</div><div class="time"><span id="clock">10:24</span><span class="ampm" id="ampm">AM</span></div></div><div class="month" id="month">OCTOBER</div><div class="year" id="year">2026</div></section>
